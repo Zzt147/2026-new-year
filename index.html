@@ -133,7 +133,7 @@ const FW_CONFIG = {
             min: 50,        // [子弹数量] 第一次爆炸释放的小弹头最少数量
             max: 120        // [子弹数量] 第一次爆炸释放的小弹头最多数量
         },
-        spreadSpeed: 20,    // [扩散速度] 小弹头向外飞行的初速度 (决定了第二圈有多大)
+        spreadSpeed: 15,    // [扩散速度] 小弹头向外飞行的初速度 (决定了第二圈有多大)
         gravity: 0.015,     // [子弹重力] 小弹头下坠的重力感 (值越大下坠越快)
         waitFrames: { 
             min: 35,        // [二次引信] 小弹头飞多久后进行二次爆炸 (最小值)
@@ -478,8 +478,8 @@ function getTextCoordinates(text) {
     offCanvas.width = width;
     offCanvas.height = height;
 
-    let fontSize = width > 800 ? 300 : 120;
-    if (text.length > 3) fontSize = width > 800 ? 180 : 80; // 字多稍微小点
+    let fontSize = width > 800 ? 350 : 150;
+    if (text.length > 3) fontSize = width > 800 ? 200 : 100; // 字多稍微小点
     
     offCtx.font = `bold ${fontSize}px "${TEXT_CONFIG.fontName}", sans-serif`;
     offCtx.fillStyle = '#FFFFFF';
