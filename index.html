@@ -413,22 +413,22 @@ const isMobile = window.innerWidth < 800;
 
 const TEXT_CONFIG = {
     // ▼▼▼▼▼▼ 核心修改在这里 ▼▼▼▼▼▼
-    // 如果是手机，粒子大小设为 1.0 (电脑是 3.0)
-    particleSize: isMobile ? 1.0 : 3.0, 
+    // 如果是手机，粒子大小设为 1.2 (电脑是 3.0)
+    particleSize: isMobile ? 1.2 : 3.0, 
     
-    // 如果是手机，粒子间距设为 5 (电脑是 10)
+    // 如果是手机，粒子间距设为 4 (电脑是 10)
     // 解释：手机屏幕小，必须缩小间距，否则字会因为太宽而显示不全
-    particleGap: isMobile ? 5 : 10,
+    particleGap: isMobile ? 4 : 10,
     // ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
 
     bloomScaleMin: 1.5, bloomScaleMax: 2.2,
-    bloomAlphaMin: 0.3, bloomAlphaMax: 0.6,
+    bloomAlphaMin: 0.0, bloomAlphaMax: 0.8,
     dyingScatterSpeed: 0.01, dyingFadeSpeed: 0.005,
     rebirthMoveSpeed: 0.05, rebirthStartSize: 8.0, rebirthStartAlpha: 0.4,
     fontName: 'Roboto',
     // 注意：前5个是倒计时，2026开始是正式烟花
     textList: ['5', '4', '3', '2', '1', '2026', '新年快乐', '新的一年', '祝周佳纯', '心想事成', '万事胜意', '好运+n', '幸福+n', '健康+n', '快乐+n'], 
-    normalAlpha: 1.0
+    normalAlpha: 1
 };
 let textParticles = []; 
 let isTextEnded = false;
